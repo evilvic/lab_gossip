@@ -1,4 +1,4 @@
-import { json } from "@remix-run/node";
+import { json, LoaderArgs, MetaFunction } from "@remix-run/node";
 import {
   Links,
   LiveReload,
@@ -8,10 +8,9 @@ import {
   ScrollRestoration,
   useLoaderData,
 } from "@remix-run/react";
-import { useState } from "react";
 import { createClient, SupabaseClient } from "@supabase/supabase-js";
+import { useState } from "react";
 
-import type { LoaderArgs, MetaFunction } from "@remix-run/node";
 import type { Database } from "db_types";
 
 type TypedSupabaseClient = SupabaseClient<Database>
